@@ -1,0 +1,5 @@
+/home/christian/catkin_ws/src/turtlebot_lawn_mower/src/LawnMower.cpp:50:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/home/christian/catkin_ws/src/turtlebot_lawn_mower/src/LawnMower.cpp:58:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/home/christian/catkin_ws/src/turtlebot_lawn_mower/src/LawnMower.cpp:60:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing /home/christian/catkin_ws/src/turtlebot_lawn_mower/src/LawnMower.cpp
+Total errors found: 3
