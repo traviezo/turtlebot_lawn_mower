@@ -1,0 +1,9 @@
+Checking src/LawnMower.cpp...
+1/3 files checked 28% done
+Checking src/turtlebot_lawn_mower.cpp...
+2/3 files checked 62% done
+Checking test/turtlebotTest.cpp...
+3/3 files checked 100% done
+Checking usage of global functions..
+
+(information) Cppcheck cannot find all the include files (use --check-config for details)
