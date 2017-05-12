@@ -1,0 +1,18 @@
+<launch>  
+  <!-- <param name="/use_sim_time" value="true"/> -->
+  <!--  Launch turtle bot world  -->
+  <include file="$(find turtlebot_lawn_mower)/launch/turtlebot_world.launch">
+    <arg name="world_file" value="$(find turtlebot_lawn_mower)/ros_worlds/turtlebot_world_with_house.world"/>
+  </include>
+
+  <!-- Launch navigation stack with amcl -->
+  <include file="$(find turtlebot_lawn_mower)/launch/LawnMower_amcl.launch">
+    <arg name="map_file" value="$(find turtlebot_lawn_mower)/maps/turtlebot_world.yaml"/>
+  </include>
+
+  <!-- Launch rviz -->
+  <include file="$(find turtlebot_rviz_launchers)/launch/view_navigation.launch"/>
+  
+  <!-- Launch send goals node -->
+  <!-- node name="turtlebot_lawn_mower_node" pkg="turtlebot_lawn_mower" type="turtlebot_lawn_mower_node" output="screen"/ -->
+</launch> 
