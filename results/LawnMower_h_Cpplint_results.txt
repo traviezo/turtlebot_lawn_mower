@@ -1,0 +1,8 @@
+/home/christian/catkin_ws/src/turtlebot_lawn_mower/include/LawnMower.h:72:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/home/christian/catkin_ws/src/turtlebot_lawn_mower/include/LawnMower.h:72:  Is this a non-const reference? If so, make const or use a pointer: move_base_msgs::MoveBaseGoal & goal  [runtime/references] [2]
+/home/christian/catkin_ws/src/turtlebot_lawn_mower/include/LawnMower.h:79:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/home/christian/catkin_ws/src/turtlebot_lawn_mower/include/LawnMower.h:79:  Is this a non-const reference? If so, make const or use a pointer: actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> &actionClient  [runtime/references] [2]
+/home/christian/catkin_ws/src/turtlebot_lawn_mower/include/LawnMower.h:97:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/home/christian/catkin_ws/src/turtlebot_lawn_mower/include/LawnMower.h:103:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing /home/christian/catkin_ws/src/turtlebot_lawn_mower/include/LawnMower.h
+Total errors found: 6
