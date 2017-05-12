@@ -1,0 +1,192 @@
+\hypertarget{turtlebotTest_8cpp}{\section{test/turtlebot\-Test.cpp File Reference}
+\label{turtlebotTest_8cpp}\index{test/turtlebot\-Test.\-cpp@{test/turtlebot\-Test.\-cpp}}
+}
+
+
+File contains tests for the \hyperlink{classLawnMower}{Lawn\-Mower} class.  
+
+
+{\ttfamily \#include $<$gtest/gtest.\-h$>$}\\*
+{\ttfamily \#include $<$tf/transform\-\_\-datatypes.\-h$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}../src/\-Lawn\-Mower.\-cpp\char`\"{}}\\*
+Include dependency graph for turtlebot\-Test.\-cpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{turtlebotTest_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{turtlebotTest_8cpp_aec20688b3dc0a2ca678c90ff98b8db39}{T\-E\-S\-T} (Quaternion\-Conversion, Correct\-Quaternion\-Calculation1)
+\item 
+\hyperlink{turtlebotTest_8cpp_a8b377cf4e80009e38990da523af77bc1}{T\-E\-S\-T} (Quaternion\-Conversion, Correct\-Quaternion\-Calculation2)
+\item 
+\hyperlink{turtlebotTest_8cpp_a965b0d14a8ee54b0c9f316c6864b98e7}{T\-E\-S\-T} (Quaternion\-Conversion, Correct\-Quaternion\-Calculation3)
+\item 
+\hyperlink{turtlebotTest_8cpp_a5ed6292138d3c7816d69c194eca9bd5c}{T\-E\-S\-T} (Quaternion\-Conversion, Correct\-Quaternion\-Calculation4)
+\item 
+\hyperlink{turtlebotTest_8cpp_a5adc1bc95493d5940d18e79ced656697}{T\-E\-S\-T} (Path\-Coordinates, get\-Path\-X\-Coordinate)
+\item 
+\hyperlink{turtlebotTest_8cpp_a1db8072bb01b9f201793cc28ba35989b}{T\-E\-S\-T} (Path\-Coordinates, get\-Path\-Y\-Coordinate)
+\item 
+\hyperlink{turtlebotTest_8cpp_a97ea4c2dda9469506e01ff1d61fbfc5d}{T\-E\-S\-T} (Path\-Coordinates, get\-Path\-Angle\-Pose)
+\item 
+int \hyperlink{turtlebotTest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File contains tests for the \hyperlink{classLawnMower}{Lawn\-Mower} class. \begin{DoxyAuthor}{Author}
+Christian Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10 May 2017 This file tests the \hyperlink{classLawnMower}{Lawn\-Mower} class member functions. Member functions that do not have return parameters are not tested, instead visual inspection is performed on this functions using R\-O\-S\-\_\-\-I\-N\-F\-O messages in the source code in order to provide the user a sense of parameters confidence while running the simulation.
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See Also}
+\href{https://github.com/traviezo/turtlebot_lawn_mower}{\tt https\-://github.\-com/traviezo/turtlebot\-\_\-lawn\-\_\-mower} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\hypertarget{turtlebotTest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{\index{turtlebot\-Test.\-cpp@{turtlebot\-Test.\-cpp}!main@{main}}
+\index{main@{main}!turtlebotTest.cpp@{turtlebot\-Test.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{turtlebotTest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+100 \{
+101   ros::init(argc, argv, \textcolor{stringliteral}{"turtlebotTest"});
+102   testing::InitGoogleTest(&argc, argv);
+103   \textcolor{keywordflow}{return} RUN\_ALL\_TESTS();
+104 \}
+\end{DoxyCode}
+\hypertarget{turtlebotTest_8cpp_aec20688b3dc0a2ca678c90ff98b8db39}{\index{turtlebot\-Test.\-cpp@{turtlebot\-Test.\-cpp}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!turtlebotTest.cpp@{turtlebot\-Test.\-cpp}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Quaternion\-Conversion}]{, }
+\item[{Correct\-Quaternion\-Calculation1}]{}
+\end{DoxyParamCaption}
+)}}\label{turtlebotTest_8cpp_aec20688b3dc0a2ca678c90ff98b8db39}
+
+\begin{DoxyCode}
+44 \{
+45   \hyperlink{classLawnMower}{LawnMower} lawnMowerBot;
+46   tf::Quaternion q;
+47   q.setRPY(0.0, 0.0, 0.0);
+48   EXPECT\_EQ(q, lawnMowerBot.\hyperlink{classLawnMower_a97a31ca30db64496d5a85b4218f69cab}{quaternionCalculation}(0.0));
+49 \}
+\end{DoxyCode}
+\hypertarget{turtlebotTest_8cpp_a8b377cf4e80009e38990da523af77bc1}{\index{turtlebot\-Test.\-cpp@{turtlebot\-Test.\-cpp}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!turtlebotTest.cpp@{turtlebot\-Test.\-cpp}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Quaternion\-Conversion}]{, }
+\item[{Correct\-Quaternion\-Calculation2}]{}
+\end{DoxyParamCaption}
+)}}\label{turtlebotTest_8cpp_a8b377cf4e80009e38990da523af77bc1}
+
+\begin{DoxyCode}
+52 \{
+53   \hyperlink{classLawnMower}{LawnMower} lawnMowerBot;
+54   tf::Quaternion q;
+55   q.setRPY(0.0, 0.0, M\_PI);
+56   EXPECT\_EQ(q, lawnMowerBot.\hyperlink{classLawnMower_a97a31ca30db64496d5a85b4218f69cab}{quaternionCalculation}(180.0));
+57 \}
+\end{DoxyCode}
+\hypertarget{turtlebotTest_8cpp_a965b0d14a8ee54b0c9f316c6864b98e7}{\index{turtlebot\-Test.\-cpp@{turtlebot\-Test.\-cpp}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!turtlebotTest.cpp@{turtlebot\-Test.\-cpp}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Quaternion\-Conversion}]{, }
+\item[{Correct\-Quaternion\-Calculation3}]{}
+\end{DoxyParamCaption}
+)}}\label{turtlebotTest_8cpp_a965b0d14a8ee54b0c9f316c6864b98e7}
+
+\begin{DoxyCode}
+60 \{
+61   \hyperlink{classLawnMower}{LawnMower} lawnMowerBot;
+62   tf::Quaternion q;
+63   q.setRPY(0.0, 0.0, -(M\_PI/2));
+64   EXPECT\_EQ(q, lawnMowerBot.\hyperlink{classLawnMower_a97a31ca30db64496d5a85b4218f69cab}{quaternionCalculation}(-90.0));
+65 \}
+\end{DoxyCode}
+\hypertarget{turtlebotTest_8cpp_a5ed6292138d3c7816d69c194eca9bd5c}{\index{turtlebot\-Test.\-cpp@{turtlebot\-Test.\-cpp}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!turtlebotTest.cpp@{turtlebot\-Test.\-cpp}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Quaternion\-Conversion}]{, }
+\item[{Correct\-Quaternion\-Calculation4}]{}
+\end{DoxyParamCaption}
+)}}\label{turtlebotTest_8cpp_a5ed6292138d3c7816d69c194eca9bd5c}
+
+\begin{DoxyCode}
+68 \{
+69   \hyperlink{classLawnMower}{LawnMower} lawnMowerBot;
+70   tf::Quaternion q;
+71   q.setRPY(0.0, 0.0, (M\_PI/2));
+72   EXPECT\_EQ(q, lawnMowerBot.\hyperlink{classLawnMower_a97a31ca30db64496d5a85b4218f69cab}{quaternionCalculation}(90.0));
+73 \}
+\end{DoxyCode}
+\hypertarget{turtlebotTest_8cpp_a5adc1bc95493d5940d18e79ced656697}{\index{turtlebot\-Test.\-cpp@{turtlebot\-Test.\-cpp}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!turtlebotTest.cpp@{turtlebot\-Test.\-cpp}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Path\-Coordinates}]{, }
+\item[{get\-Path\-X\-Coordinate}]{}
+\end{DoxyParamCaption}
+)}}\label{turtlebotTest_8cpp_a5adc1bc95493d5940d18e79ced656697}
+
+\begin{DoxyCode}
+76 \{
+77   \hyperlink{classLawnMower}{LawnMower} lawnMowerBot;
+78   std::vector<double> \hyperlink{turtlebot__lawn__mower_8cpp_ab924092e01ea1007f9b6d88bc3d9c723}{xCoordinates} \{ 0.25, 0.25,  2.75,  2.75, -1.25, -1.25,  3.25, 3.25, -1.25
+      , -1.25,  3.25, 3.25, -1.25, -1.25,  3.25, 3.25, -1.25, -1.25,  3.25,  3.25, -0.5, -1.25, 3.25,  3.25\};
+79   lawnMowerBot.\hyperlink{classLawnMower_a522dfba30f16929bbb4fa60af11771b3}{setPathX}(\hyperlink{turtlebot__lawn__mower_8cpp_ab924092e01ea1007f9b6d88bc3d9c723}{xCoordinates});
+80   EXPECT\_EQ(2.75, lawnMowerBot.\hyperlink{classLawnMower_a989d400596032888d1e063dc289768b2}{getPathXCoordinate}()->at(3));
+81 \}
+\end{DoxyCode}
+\hypertarget{turtlebotTest_8cpp_a1db8072bb01b9f201793cc28ba35989b}{\index{turtlebot\-Test.\-cpp@{turtlebot\-Test.\-cpp}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!turtlebotTest.cpp@{turtlebot\-Test.\-cpp}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Path\-Coordinates}]{, }
+\item[{get\-Path\-Y\-Coordinate}]{}
+\end{DoxyParamCaption}
+)}}\label{turtlebotTest_8cpp_a1db8072bb01b9f201793cc28ba35989b}
+
+\begin{DoxyCode}
+84 \{
+85   \hyperlink{classLawnMower}{LawnMower} lawnMowerBot;
+86   std::vector<double> \hyperlink{turtlebot__lawn__mower_8cpp_a2fdc9aef0350032e97be2faac7fc0ec8}{yCoordinates} \{ 4.25, 3.75,  3.75,  3.25,  3.25,  2.75,  2.75, 2.25,  2.25
+      ,  1.75,  1.75, 1.25,  1.25,  0.75,  0.75, 0.25,  0.25, -0.25, -0.25,  -0.5, -1.5, -0.25, 4.25,  4.25\};
+87   lawnMowerBot.\hyperlink{classLawnMower_aa623d7ab5e162524a7c3ee9fe4de8fe1}{setPathY}(\hyperlink{turtlebot__lawn__mower_8cpp_a2fdc9aef0350032e97be2faac7fc0ec8}{yCoordinates});
+88   EXPECT\_EQ(3.25, lawnMowerBot.\hyperlink{classLawnMower_a3def1589d73101f642f7465ec740762d}{getPathYCoordinate}()->at(3));
+89 \}
+\end{DoxyCode}
+\hypertarget{turtlebotTest_8cpp_a97ea4c2dda9469506e01ff1d61fbfc5d}{\index{turtlebot\-Test.\-cpp@{turtlebot\-Test.\-cpp}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!turtlebotTest.cpp@{turtlebot\-Test.\-cpp}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Path\-Coordinates}]{, }
+\item[{get\-Path\-Angle\-Pose}]{}
+\end{DoxyParamCaption}
+)}}\label{turtlebotTest_8cpp_a97ea4c2dda9469506e01ff1d61fbfc5d}
+
+\begin{DoxyCode}
+92 \{
+93   \hyperlink{classLawnMower}{LawnMower} lawnMowerBot;
+94   std::vector<double> \hyperlink{turtlebot__lawn__mower_8cpp_a06c7ee380c5c4448f42b667fb3a645c4}{anglePose} \{-90.0,  0.0, -90.0, 180.0, -90.0,   0.0, -90.0,  180, -90.0,   0.
+      0, -90.0,  180, -90.0,   0.0, -90.0,  180, -90.0,   0.0, -90.0, 180.0, 90.0,   0.0,  0.0, 180.0\};
+95   lawnMowerBot.\hyperlink{classLawnMower_a05dbed29e3ee522d845c8fbb9fe4b986}{setAnglePose}(\hyperlink{turtlebot__lawn__mower_8cpp_a06c7ee380c5c4448f42b667fb3a645c4}{anglePose});
+96   EXPECT\_EQ(180, lawnMowerBot.\hyperlink{classLawnMower_aec7ea498bca8e6092d7d8ae1f90417c3}{getPathAnglePose}()->at(3));
+97 \}
+\end{DoxyCode}

@@ -1,0 +1,117 @@
+\hypertarget{turtlebot__lawn__mower_8cpp}{\section{src/turtlebot\-\_\-lawn\-\_\-mower.cpp File Reference}
+\label{turtlebot__lawn__mower_8cpp}\index{src/turtlebot\-\_\-lawn\-\_\-mower.\-cpp@{src/turtlebot\-\_\-lawn\-\_\-mower.\-cpp}}
+}
+
+
+File containing the main function.  
+
+
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}../include/\-Lawn\-Mower.\-h\char`\"{}}\\*
+Include dependency graph for turtlebot\-\_\-lawn\-\_\-mower.\-cpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{turtlebot__lawn__mower_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \\*
+actionlib\-::\-Simple\-Action\-Client\\*
+$<$ move\-\_\-base\-\_\-msgs\-::\-Move\-Base\-Action $>$ \hyperlink{turtlebot__lawn__mower_8cpp_a21e20cc0b6656ae897b3cbb969b93241}{Move\-Base\-Client}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{turtlebot__lawn__mower_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ double $>$ \hyperlink{turtlebot__lawn__mower_8cpp_ab924092e01ea1007f9b6d88bc3d9c723}{x\-Coordinates} \{ 0.\-25, 0.\-25, 2.\-75, 2.\-75, -\/1.\-25, -\/1.\-25, 3.\-25, 3.\-25, -\/1.\-25, -\/1.\-25, 3.\-25, 3.\-25, -\/1.\-25, -\/1.\-25, 3.\-25, 3.\-25, -\/1.\-25, -\/1.\-25, 3.\-25, 3.\-25, -\/0.\-5, -\/1.\-25, 3.\-25, 3.\-25\}
+\item 
+std\-::vector$<$ double $>$ \hyperlink{turtlebot__lawn__mower_8cpp_a2fdc9aef0350032e97be2faac7fc0ec8}{y\-Coordinates} \{ 4.\-25, 3.\-75, 3.\-75, 3.\-25, 3.\-25, 2.\-75, 2.\-75, 2.\-25, 2.\-25, 1.\-75, 1.\-75, 1.\-25, 1.\-25, 0.\-75, 0.\-75, 0.\-25, 0.\-25, -\/0.\-25, -\/0.\-25, -\/0.\-5, -\/1.\-5, -\/0.\-25, 4.\-25, 4.\-25\}
+\item 
+std\-::vector$<$ double $>$ \hyperlink{turtlebot__lawn__mower_8cpp_a06c7ee380c5c4448f42b667fb3a645c4}{angle\-Pose} \{-\/90.\-0, 0.\-0, -\/90.\-0, 180.\-0, -\/90.\-0, 0.\-0, -\/90.\-0, 180, -\/90.\-0, 0.\-0, -\/90.\-0, 180, -\/90.\-0, 0.\-0, -\/90.\-0, 180, -\/90.\-0, 0.\-0, -\/90.\-0, 180.\-0, 90.\-0, 0.\-0, 0.\-0, 180.\-0\}
+\item 
+int const \hyperlink{turtlebot__lawn__mower_8cpp_a1d25959ca5224ef5554a5605ac902c5d}{N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-G\-O\-A\-L\-\_\-\-P\-O\-S\-E\-S} = 24
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File containing the main function. \begin{DoxyAuthor}{Author}
+Christian Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5 May 2017 This file calls the \hyperlink{classLawnMower}{Lawn\-Mower} class and other classes in order to guide the turtlebot along the simulated gazebo world.
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See Also}
+\href{https://github.com/traviezo/turtlebot_lawn_mower}{\tt https\-://github.\-com/traviezo/turtlebot\-\_\-lawn\-\_\-mower} 
+\end{DoxySeeAlso}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{turtlebot__lawn__mower_8cpp_a21e20cc0b6656ae897b3cbb969b93241}{\index{turtlebot\-\_\-lawn\-\_\-mower.\-cpp@{turtlebot\-\_\-lawn\-\_\-mower.\-cpp}!Move\-Base\-Client@{Move\-Base\-Client}}
+\index{Move\-Base\-Client@{Move\-Base\-Client}!turtlebot_lawn_mower.cpp@{turtlebot\-\_\-lawn\-\_\-mower.\-cpp}}
+\subsubsection[{Move\-Base\-Client}]{\setlength{\rightskip}{0pt plus 5cm}typedef actionlib\-::\-Simple\-Action\-Client$<$move\-\_\-base\-\_\-msgs\-::\-Move\-Base\-Action$>$ {\bf Move\-Base\-Client}}}\label{turtlebot__lawn__mower_8cpp_a21e20cc0b6656ae897b3cbb969b93241}
+
+
+\subsection{Function Documentation}
+\hypertarget{turtlebot__lawn__mower_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{\index{turtlebot\-\_\-lawn\-\_\-mower.\-cpp@{turtlebot\-\_\-lawn\-\_\-mower.\-cpp}!main@{main}}
+\index{main@{main}!turtlebot_lawn_mower.cpp@{turtlebot\-\_\-lawn\-\_\-mower.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{turtlebot__lawn__mower_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+46                                 \{
+47   ros::init(argc, argv, \textcolor{stringliteral}{"turtlebot\_lawn\_mower\_node"});
+48   ros::NodeHandle nh;
+49   \hyperlink{classLawnMower}{LawnMower} lawnMowerBot;
+50   move\_base\_msgs::MoveBaseGoal goal;
+51   \hyperlink{turtlebot__lawn__mower_8cpp_a21e20cc0b6656ae897b3cbb969b93241}{MoveBaseClient} actionClient(\textcolor{stringliteral}{"move\_base"}, \textcolor{keyword}{true});
+52   ROS\_INFO(\textcolor{stringliteral}{"Waiting for the move\_base action server..."});
+53   actionClient.waitForServer(ros::Duration(60));
+54   ROS\_INFO(\textcolor{stringliteral}{"Connected to move\_base server"});
+55   lawnMowerBot.\hyperlink{classLawnMower_a522dfba30f16929bbb4fa60af11771b3}{setPathX}(\hyperlink{turtlebot__lawn__mower_8cpp_ab924092e01ea1007f9b6d88bc3d9c723}{xCoordinates});
+56   lawnMowerBot.\hyperlink{classLawnMower_aa623d7ab5e162524a7c3ee9fe4de8fe1}{setPathY}(\hyperlink{turtlebot__lawn__mower_8cpp_a2fdc9aef0350032e97be2faac7fc0ec8}{yCoordinates});
+57   lawnMowerBot.\hyperlink{classLawnMower_a05dbed29e3ee522d845c8fbb9fe4b986}{setAnglePose}(\hyperlink{turtlebot__lawn__mower_8cpp_a06c7ee380c5c4448f42b667fb3a645c4}{anglePose});
+58   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{turtlebot__lawn__mower_8cpp_a1d25959ca5224ef5554a5605ac902c5d}{NUMBER\_OF\_GOAL\_POSES}; i++) \{
+59     tf::Quaternion quaternion;
+60     quaternion = lawnMowerBot.\hyperlink{classLawnMower_a97a31ca30db64496d5a85b4218f69cab}{quaternionCalculation}(lawnMowerBot.
+      \hyperlink{classLawnMower_aec7ea498bca8e6092d7d8ae1f90417c3}{getPathAnglePose}()->at(i));
+61     geometry\_msgs::Quaternion qMsg;
+62     qMsg = lawnMowerBot.\hyperlink{classLawnMower_a568bac793e0082f6ff89ac918a671c3b}{convertToQMsg}(quaternion);
+63     lawnMowerBot.\hyperlink{classLawnMower_af4e360e5861ef467a824c54b3027a25c}{setPoseGoals}(lawnMowerBot.\hyperlink{classLawnMower_a989d400596032888d1e063dc289768b2}{getPathXCoordinate}()->at(i), 
+      lawnMowerBot.\hyperlink{classLawnMower_a3def1589d73101f642f7465ec740762d}{getPathYCoordinate}()->at(i), qMsg, goal);
+64     lawnMowerBot.\hyperlink{classLawnMower_ac0a9afe85e5ab7067d1b61d95964119b}{sendGoal}(goal, actionClient);
+65     actionClient.waitForResult();
+66     \textcolor{keywordflow}{if} (actionClient.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
+67       ROS\_INFO(\textcolor{stringliteral}{"You have reached goal.."});
+68     \textcolor{keywordflow}{else}
+69       ROS\_INFO(\textcolor{stringliteral}{"The base failed to reach goal.."});
+70   \}
+71   \textcolor{keywordflow}{return} 0;
+72 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{turtlebot__lawn__mower_8cpp_a06c7ee380c5c4448f42b667fb3a645c4}{\index{turtlebot\-\_\-lawn\-\_\-mower.\-cpp@{turtlebot\-\_\-lawn\-\_\-mower.\-cpp}!angle\-Pose@{angle\-Pose}}
+\index{angle\-Pose@{angle\-Pose}!turtlebot_lawn_mower.cpp@{turtlebot\-\_\-lawn\-\_\-mower.\-cpp}}
+\subsubsection[{angle\-Pose}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$double$>$ angle\-Pose \{-\/90.\-0, 0.\-0, -\/90.\-0, 180.\-0, -\/90.\-0, 0.\-0, -\/90.\-0, 180, -\/90.\-0, 0.\-0, -\/90.\-0, 180, -\/90.\-0, 0.\-0, -\/90.\-0, 180, -\/90.\-0, 0.\-0, -\/90.\-0, 180.\-0, 90.\-0, 0.\-0, 0.\-0, 180.\-0\}}}\label{turtlebot__lawn__mower_8cpp_a06c7ee380c5c4448f42b667fb3a645c4}
+\hypertarget{turtlebot__lawn__mower_8cpp_a1d25959ca5224ef5554a5605ac902c5d}{\index{turtlebot\-\_\-lawn\-\_\-mower.\-cpp@{turtlebot\-\_\-lawn\-\_\-mower.\-cpp}!N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-G\-O\-A\-L\-\_\-\-P\-O\-S\-E\-S@{N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-G\-O\-A\-L\-\_\-\-P\-O\-S\-E\-S}}
+\index{N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-G\-O\-A\-L\-\_\-\-P\-O\-S\-E\-S@{N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-G\-O\-A\-L\-\_\-\-P\-O\-S\-E\-S}!turtlebot_lawn_mower.cpp@{turtlebot\-\_\-lawn\-\_\-mower.\-cpp}}
+\subsubsection[{N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-G\-O\-A\-L\-\_\-\-P\-O\-S\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}int const N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-G\-O\-A\-L\-\_\-\-P\-O\-S\-E\-S = 24}}\label{turtlebot__lawn__mower_8cpp_a1d25959ca5224ef5554a5605ac902c5d}
+\hypertarget{turtlebot__lawn__mower_8cpp_ab924092e01ea1007f9b6d88bc3d9c723}{\index{turtlebot\-\_\-lawn\-\_\-mower.\-cpp@{turtlebot\-\_\-lawn\-\_\-mower.\-cpp}!x\-Coordinates@{x\-Coordinates}}
+\index{x\-Coordinates@{x\-Coordinates}!turtlebot_lawn_mower.cpp@{turtlebot\-\_\-lawn\-\_\-mower.\-cpp}}
+\subsubsection[{x\-Coordinates}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$double$>$ x\-Coordinates \{ 0.\-25, 0.\-25, 2.\-75, 2.\-75, -\/1.\-25, -\/1.\-25, 3.\-25, 3.\-25, -\/1.\-25, -\/1.\-25, 3.\-25, 3.\-25, -\/1.\-25, -\/1.\-25, 3.\-25, 3.\-25, -\/1.\-25, -\/1.\-25, 3.\-25, 3.\-25, -\/0.\-5, -\/1.\-25, 3.\-25, 3.\-25\}}}\label{turtlebot__lawn__mower_8cpp_ab924092e01ea1007f9b6d88bc3d9c723}
+\hypertarget{turtlebot__lawn__mower_8cpp_a2fdc9aef0350032e97be2faac7fc0ec8}{\index{turtlebot\-\_\-lawn\-\_\-mower.\-cpp@{turtlebot\-\_\-lawn\-\_\-mower.\-cpp}!y\-Coordinates@{y\-Coordinates}}
+\index{y\-Coordinates@{y\-Coordinates}!turtlebot_lawn_mower.cpp@{turtlebot\-\_\-lawn\-\_\-mower.\-cpp}}
+\subsubsection[{y\-Coordinates}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$double$>$ y\-Coordinates \{ 4.\-25, 3.\-75, 3.\-75, 3.\-25, 3.\-25, 2.\-75, 2.\-75, 2.\-25, 2.\-25, 1.\-75, 1.\-75, 1.\-25, 1.\-25, 0.\-75, 0.\-75, 0.\-25, 0.\-25, -\/0.\-25, -\/0.\-25, -\/0.\-5, -\/1.\-5, -\/0.\-25, 4.\-25, 4.\-25\}}}\label{turtlebot__lawn__mower_8cpp_a2fdc9aef0350032e97be2faac7fc0ec8}

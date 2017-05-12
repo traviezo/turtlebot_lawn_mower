@@ -1,0 +1,306 @@
+\hypertarget{classLawnMower}{\section{Lawn\-Mower Class Reference}
+\label{classLawnMower}\index{Lawn\-Mower@{Lawn\-Mower}}
+}
+
+
+{\ttfamily \#include $<$Lawn\-Mower.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classLawnMower_a522dfba30f16929bbb4fa60af11771b3}{set\-Path\-X} (std\-::vector$<$ double $>$ x)
+\begin{DoxyCompactList}\small\item\em Stores the x coordinates of desired lawn mowing pattern. \end{DoxyCompactList}\item 
+void \hyperlink{classLawnMower_aa623d7ab5e162524a7c3ee9fe4de8fe1}{set\-Path\-Y} (std\-::vector$<$ double $>$ y)
+\begin{DoxyCompactList}\small\item\em Stores the y coordinates of desired lawn mowing pattern. \end{DoxyCompactList}\item 
+void \hyperlink{classLawnMower_a05dbed29e3ee522d845c8fbb9fe4b986}{set\-Angle\-Pose} (std\-::vector$<$ double $>$ theta)
+\begin{DoxyCompactList}\small\item\em Stores the pose angle of orientation of desired lawn mowing pattern. \end{DoxyCompactList}\item 
+void \hyperlink{classLawnMower_af4e360e5861ef467a824c54b3027a25c}{set\-Pose\-Goals} (double x\-Pose, double y\-Pose, geometry\-\_\-msgs\-::\-Quaternion q\-Msg, move\-\_\-base\-\_\-msgs\-::\-Move\-Base\-Goal \&goal)
+\begin{DoxyCompactList}\small\item\em Sets a goal coordinate in the x,y plane and pose angle. \end{DoxyCompactList}\item 
+void \hyperlink{classLawnMower_ac0a9afe85e5ab7067d1b61d95964119b}{send\-Goal} (move\-\_\-base\-\_\-msgs\-::\-Move\-Base\-Goal goal, actionlib\-::\-Simple\-Action\-Client$<$ move\-\_\-base\-\_\-msgs\-::\-Move\-Base\-Action $>$ \&action\-Client)
+\begin{DoxyCompactList}\small\item\em Broadcasts a goal action to the ros network. \end{DoxyCompactList}\item 
+tf\-::\-Quaternion \hyperlink{classLawnMower_a97a31ca30db64496d5a85b4218f69cab}{quaternion\-Calculation} (double theta)
+\begin{DoxyCompactList}\small\item\em Calculates conversion from Euler angle to Quaternion. \end{DoxyCompactList}\item 
+geometry\-\_\-msgs\-::\-Quaternion \hyperlink{classLawnMower_a568bac793e0082f6ff89ac918a671c3b}{convert\-To\-Q\-Msg} (tf\-::\-Quaternion quaternion)
+\begin{DoxyCompactList}\small\item\em Converts quaternion to a more suitable message for broadcasting. \end{DoxyCompactList}\item 
+const std\-::vector$<$ double $>$ $\ast$ \hyperlink{classLawnMower_a989d400596032888d1e063dc289768b2}{get\-Path\-X\-Coordinate} () const 
+\begin{DoxyCompactList}\small\item\em returns specific specified element from x coordinate vector. \end{DoxyCompactList}\item 
+const std\-::vector$<$ double $>$ $\ast$ \hyperlink{classLawnMower_a3def1589d73101f642f7465ec740762d}{get\-Path\-Y\-Coordinate} () const 
+\begin{DoxyCompactList}\small\item\em returns specific specified element from y coordinate vector. \end{DoxyCompactList}\item 
+const std\-::vector$<$ double $>$ $\ast$ \hyperlink{classLawnMower_aec7ea498bca8e6092d7d8ae1f90417c3}{get\-Path\-Angle\-Pose} () const 
+\begin{DoxyCompactList}\small\item\em returns specific specified element from pose angle vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classLawnMower_a568bac793e0082f6ff89ac918a671c3b}{\index{Lawn\-Mower@{Lawn\-Mower}!convert\-To\-Q\-Msg@{convert\-To\-Q\-Msg}}
+\index{convert\-To\-Q\-Msg@{convert\-To\-Q\-Msg}!LawnMower@{Lawn\-Mower}}
+\subsubsection[{convert\-To\-Q\-Msg}]{\setlength{\rightskip}{0pt plus 5cm}geometry\-\_\-msgs\-::\-Quaternion Lawn\-Mower\-::convert\-To\-Q\-Msg (
+\begin{DoxyParamCaption}
+\item[{tf\-::\-Quaternion}]{quaternion}
+\end{DoxyParamCaption}
+)}}\label{classLawnMower_a568bac793e0082f6ff89ac918a671c3b}
+
+
+Converts quaternion to a more suitable message for broadcasting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quaternion} & quaternion containing goal pose data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+geometry\-\_\-msgs\-::\-Quaternion quaternion message that contains goal pose data. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+77 \{
+78   geometry\_msgs::Quaternion qMsg;
+79   tf::quaternionTFToMsg(quaternion, qMsg);
+80   \textcolor{keywordflow}{return} qMsg;
+81 \}
+\end{DoxyCode}
+\hypertarget{classLawnMower_aec7ea498bca8e6092d7d8ae1f90417c3}{\index{Lawn\-Mower@{Lawn\-Mower}!get\-Path\-Angle\-Pose@{get\-Path\-Angle\-Pose}}
+\index{get\-Path\-Angle\-Pose@{get\-Path\-Angle\-Pose}!LawnMower@{Lawn\-Mower}}
+\subsubsection[{get\-Path\-Angle\-Pose}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<$double$>$$\ast$ Lawn\-Mower\-::get\-Path\-Angle\-Pose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classLawnMower_aec7ea498bca8e6092d7d8ae1f90417c3}
+
+
+returns specific specified element from pose angle vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const std\-::vector$<$double$>$$\ast$ pointer to element of pose angle vector. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+109 \{\textcolor{keywordflow}{return} &pathAnglePose;\}
+\end{DoxyCode}
+\hypertarget{classLawnMower_a989d400596032888d1e063dc289768b2}{\index{Lawn\-Mower@{Lawn\-Mower}!get\-Path\-X\-Coordinate@{get\-Path\-X\-Coordinate}}
+\index{get\-Path\-X\-Coordinate@{get\-Path\-X\-Coordinate}!LawnMower@{Lawn\-Mower}}
+\subsubsection[{get\-Path\-X\-Coordinate}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<$double$>$$\ast$ Lawn\-Mower\-::get\-Path\-X\-Coordinate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classLawnMower_a989d400596032888d1e063dc289768b2}
+
+
+returns specific specified element from x coordinate vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const std\-::vector$<$double$>$$\ast$ pointer to element of x coordinate vector. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+97 \{\textcolor{keywordflow}{return} &pathXCoordinates;\}
+\end{DoxyCode}
+\hypertarget{classLawnMower_a3def1589d73101f642f7465ec740762d}{\index{Lawn\-Mower@{Lawn\-Mower}!get\-Path\-Y\-Coordinate@{get\-Path\-Y\-Coordinate}}
+\index{get\-Path\-Y\-Coordinate@{get\-Path\-Y\-Coordinate}!LawnMower@{Lawn\-Mower}}
+\subsubsection[{get\-Path\-Y\-Coordinate}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<$double$>$$\ast$ Lawn\-Mower\-::get\-Path\-Y\-Coordinate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classLawnMower_a3def1589d73101f642f7465ec740762d}
+
+
+returns specific specified element from y coordinate vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const std\-::vector$<$double$>$$\ast$ pointer to element of y coordinate vector. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+103 \{\textcolor{keywordflow}{return} &pathYCoordinates;\}
+\end{DoxyCode}
+\hypertarget{classLawnMower_a97a31ca30db64496d5a85b4218f69cab}{\index{Lawn\-Mower@{Lawn\-Mower}!quaternion\-Calculation@{quaternion\-Calculation}}
+\index{quaternion\-Calculation@{quaternion\-Calculation}!LawnMower@{Lawn\-Mower}}
+\subsubsection[{quaternion\-Calculation}]{\setlength{\rightskip}{0pt plus 5cm}tf\-::\-Quaternion Lawn\-Mower\-::quaternion\-Calculation (
+\begin{DoxyParamCaption}
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)}}\label{classLawnMower_a97a31ca30db64496d5a85b4218f69cab}
+
+
+Calculates conversion from Euler angle to Quaternion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em theta} & pose yaw angle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tf\-::\-Quaternion quaternion containing goal pose data. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+69 \{
+70   \textcolor{keywordtype}{double} radians = theta*(M\_PI/180);
+71   tf::Quaternion quaternion;
+72   quaternion = tf::createQuaternionFromYaw(radians);
+73   \textcolor{keywordflow}{return} quaternion;
+74 \}
+\end{DoxyCode}
+\hypertarget{classLawnMower_ac0a9afe85e5ab7067d1b61d95964119b}{\index{Lawn\-Mower@{Lawn\-Mower}!send\-Goal@{send\-Goal}}
+\index{send\-Goal@{send\-Goal}!LawnMower@{Lawn\-Mower}}
+\subsubsection[{send\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}void Lawn\-Mower\-::send\-Goal (
+\begin{DoxyParamCaption}
+\item[{move\-\_\-base\-\_\-msgs\-::\-Move\-Base\-Goal}]{goal, }
+\item[{actionlib\-::\-Simple\-Action\-Client$<$ move\-\_\-base\-\_\-msgs\-::\-Move\-Base\-Action $>$ \&}]{action\-Client}
+\end{DoxyParamCaption}
+)}}\label{classLawnMower_ac0a9afe85e5ab7067d1b61d95964119b}
+
+
+Broadcasts a goal action to the ros network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em goal} & desired location for turtlebot robot \\
+\hline
+{\em action\-Client} & Object that broadcasts goal to network \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+63 \{
+64   ROS\_INFO(\textcolor{stringliteral}{"Sending robot to:x= %f, y= %f, theta= %f"}, goal.target\_pose.pose.position.x, goal.target\_pose.
+      pose.position.y, goal.target\_pose.pose.orientation);
+65   actionClient.sendGoal(goal);
+66 \}
+\end{DoxyCode}
+\hypertarget{classLawnMower_a05dbed29e3ee522d845c8fbb9fe4b986}{\index{Lawn\-Mower@{Lawn\-Mower}!set\-Angle\-Pose@{set\-Angle\-Pose}}
+\index{set\-Angle\-Pose@{set\-Angle\-Pose}!LawnMower@{Lawn\-Mower}}
+\subsubsection[{set\-Angle\-Pose}]{\setlength{\rightskip}{0pt plus 5cm}void Lawn\-Mower\-::set\-Angle\-Pose (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ double $>$}]{theta}
+\end{DoxyParamCaption}
+)}}\label{classLawnMower_a05dbed29e3ee522d845c8fbb9fe4b986}
+
+
+Stores the pose angle of orientation of desired lawn mowing pattern. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em theta} & pose angle of orientation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+49 \{
+50   pathAnglePose = theta;
+51 \}
+\end{DoxyCode}
+\hypertarget{classLawnMower_a522dfba30f16929bbb4fa60af11771b3}{\index{Lawn\-Mower@{Lawn\-Mower}!set\-Path\-X@{set\-Path\-X}}
+\index{set\-Path\-X@{set\-Path\-X}!LawnMower@{Lawn\-Mower}}
+\subsubsection[{set\-Path\-X}]{\setlength{\rightskip}{0pt plus 5cm}void Lawn\-Mower\-::set\-Path\-X (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ double $>$}]{x}
+\end{DoxyParamCaption}
+)}}\label{classLawnMower_a522dfba30f16929bbb4fa60af11771b3}
+
+
+Stores the x coordinates of desired lawn mowing pattern. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & data coordinates of x axis \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+39 \{
+40   pathXCoordinates = x;
+41 \}
+\end{DoxyCode}
+\hypertarget{classLawnMower_aa623d7ab5e162524a7c3ee9fe4de8fe1}{\index{Lawn\-Mower@{Lawn\-Mower}!set\-Path\-Y@{set\-Path\-Y}}
+\index{set\-Path\-Y@{set\-Path\-Y}!LawnMower@{Lawn\-Mower}}
+\subsubsection[{set\-Path\-Y}]{\setlength{\rightskip}{0pt plus 5cm}void Lawn\-Mower\-::set\-Path\-Y (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ double $>$}]{y}
+\end{DoxyParamCaption}
+)}}\label{classLawnMower_aa623d7ab5e162524a7c3ee9fe4de8fe1}
+
+
+Stores the y coordinates of desired lawn mowing pattern. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & data coordinates of y axis \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+44 \{
+45   pathYCoordinates = y;
+46 \}
+\end{DoxyCode}
+\hypertarget{classLawnMower_af4e360e5861ef467a824c54b3027a25c}{\index{Lawn\-Mower@{Lawn\-Mower}!set\-Pose\-Goals@{set\-Pose\-Goals}}
+\index{set\-Pose\-Goals@{set\-Pose\-Goals}!LawnMower@{Lawn\-Mower}}
+\subsubsection[{set\-Pose\-Goals}]{\setlength{\rightskip}{0pt plus 5cm}void Lawn\-Mower\-::set\-Pose\-Goals (
+\begin{DoxyParamCaption}
+\item[{double}]{x\-Pose, }
+\item[{double}]{y\-Pose, }
+\item[{geometry\-\_\-msgs\-::\-Quaternion}]{q\-Msg, }
+\item[{move\-\_\-base\-\_\-msgs\-::\-Move\-Base\-Goal \&}]{goal}
+\end{DoxyParamCaption}
+)}}\label{classLawnMower_af4e360e5861ef467a824c54b3027a25c}
+
+
+Sets a goal coordinate in the x,y plane and pose angle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\-Pose} & goal x coordinate \\
+\hline
+{\em y\-Pose} & goal y coordinate \\
+\hline
+{\em q\-Msg} & quaternion angle pose message \\
+\hline
+{\em goal} & stores goal coordinates and pose angle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+54 \{
+55   goal.target\_pose.header.frame\_id = \textcolor{stringliteral}{"map"};
+56   goal.target\_pose.header.stamp = ros::Time::now();
+57   goal.target\_pose.pose.position.x = xPose;
+58   goal.target\_pose.pose.position.y = yPose;
+59   goal.target\_pose.pose.orientation = qMsg;
+60 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{LawnMower_8h}{Lawn\-Mower.\-h}\item 
+src/\hyperlink{LawnMower_8cpp}{Lawn\-Mower.\-cpp}\end{DoxyCompactItemize}
