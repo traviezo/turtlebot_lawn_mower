@@ -1,0 +1,8 @@
+/home/christian/catkin_ws/src/turtlebot_lawn_mower/src/turtlebot_lawn_mower.cpp:38:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/home/christian/catkin_ws/src/turtlebot_lawn_mower/src/turtlebot_lawn_mower.cpp:40:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/home/christian/catkin_ws/src/turtlebot_lawn_mower/src/turtlebot_lawn_mower.cpp:41:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/home/christian/catkin_ws/src/turtlebot_lawn_mower/src/turtlebot_lawn_mower.cpp:42:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/home/christian/catkin_ws/src/turtlebot_lawn_mower/src/turtlebot_lawn_mower.cpp:60:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/home/christian/catkin_ws/src/turtlebot_lawn_mower/src/turtlebot_lawn_mower.cpp:63:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing /home/christian/catkin_ws/src/turtlebot_lawn_mower/src/turtlebot_lawn_mower.cpp
+Total errors found: 6
