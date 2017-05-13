@@ -1,0 +1,9 @@
+<launch>
+	<node 
+           pkg="turtlebot_lawn_mower"
+           type="turtlebotTest" 
+	   name="turtlebotTest"
+           output="screen">
+	</node>
+
+</launch>
