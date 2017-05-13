@@ -39,7 +39,7 @@ install:
     - rosdep update
     # Create workspace.
     - mkdir -p ~/catkin_ws/src
-    - cd ..; mv https://github.com/traviezo/turtlebot_lawn_mower.git ~/catkin_ws/src
+    - cd ..; mv turtlebot_lawn_mower ~/catkin_ws/src
     - cd ~/catkin_ws/src
     - catkin_init_workspace
     # Install dependencies
@@ -52,5 +52,5 @@ install:
 # --------------------
 script:
     - catkin_make run_tests # Run tests using catkin
-    - rostest https://github.com/traviezo/turtlebot_lawn_mower.git test.launch # Run tests using rostest
+    - rostest turtlebot_lawn_mower test.launch # Run tests using rostest
     - pep8 src/*.py test/*.py # Linter
