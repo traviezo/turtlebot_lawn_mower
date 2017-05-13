@@ -1,6 +1,6 @@
 # turtlebot_lawn_mower
 
-[![Build Status](https://travis-ci.org/Traviezo/turtlebot_lawn_mower.svg?branch=master)](https://travis-ci.org/Traviezo/turtlebot_lawn_mower)
+[![Build Status](https://travis-ci.org/traviezo/turtlebot_lawn_mower.svg?branch=master)](https://travis-ci.org/traviezo/turtlebot_lawn_mower)
 [![Coverage Status](https://coveralls.io/repos/github/traviezo/turtlebot_lawn_mower/badge.svg?branch=master)](https://coveralls.io/github/traviezo/turtlebot_lawn_mower?branch=master)
 ---
 
